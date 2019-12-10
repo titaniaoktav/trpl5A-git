@@ -18,9 +18,15 @@
         <!-- main css -->
         <link rel="stylesheet" href="{{asset('template/css/style.css')}}">
         <link rel="stylesheet" href="{{asset('template/css/responsive.css')}}">
+         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
 
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+       <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+   crossorigin=""></script>
     </head>
     <body>
         
@@ -46,20 +52,17 @@
                                 @guest
                                 <li style="margin-left: 42%;" class="nav-item"><a class="nav-link" href="{{url('/beranda')}}">Beranda</a></li>
                                 <li class="nav-item"><a class="nav-link" href="{{url('/produk-unggulan')}}">Produk Usaha</a></li>
+
                                 @endguest
                                  @auth
-                              @if(Auth::user()->role=="wirausahawan")   
-                              <li class="nav-item" style="margin-left: ;">
-                                <a class="nav-link" href="{{url('/beranda-wirausaha')}}">Beranda</a>
-                              </li>  
-                              @else   
                               <li class="nav-item" style="margin-left: ;">
                                 <a class="nav-link" href="{{url('/beranda')}}">Beranda</a>
                               </li> 
-                              @endif                                              
+
                               <li class="nav-item">
-                                <a class="nav-link" href="{{url('/produk-unggul')}}">Produk Usaha</a>
-                              </li> 
+                                <a class="nav-link" href="{{url('/produk-unggulan')}}">Produk Usaha</a>
+                              </li>
+
                               <li class="nav-item" style="display: {{Auth::user()->role=="admin" ? "block" : "none"}}">
                                 <a class="nav-link" href="{{url('/akun-humas')}}">Akun Humas</a>
                               </li> 
@@ -98,6 +101,9 @@
     body {
         font-family: 'Varela Round', sans-serif;
     }
+
+	#mapid { height: 480px;width: 960px;}
+
     .modal-login {      
         color: #636363;
         width: 650px;
@@ -235,22 +241,30 @@
         
         <!--================ Start Single Blog Banner Area =================-->
         <section class="banner_area">
-            <div class="banner_inner d-flex align-items-center">
-                <div class="overlay bg-parallax"></div>
-                <div class="container">
-                    <div class="banner_content text-left">
-                        <div class="page_link">
-                            <a >
-                                @yield('bc1')
-                            </a>
-                            <a>
-                                @yield('bc2')
-                            </a>
-                        </div>
-                        <h2>@yield('page')</h2>
-                    </div>
-                </div>
-            </div>
+            <div id="carouselExampleControls" style="width: 90%; left: 5%" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" style="height: 600px">
+      <img style="height: 600px" class="d-block w-100" src="{{asset('jember.png')}}" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img style="height: 600px" class="d-block w-100" src="{{asset('usaha2.jpg')}}" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img style="height: 450px" class="d-block w-100" src="{{asset('usaha.jpg')}}" alt="Third slide">
+    </div>
+      <div class="carousel-item">
+      <img style="height: 450px" class="d-block w-100" src="{{asset('usaha1.jpg')}}" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
         </section>
         <!--================ End Single Blog Banner Area =================-->
         
@@ -259,11 +273,46 @@
         @yield('content')
 
         
-
         <!--================Blog Area =================-->
         
         <!--================Footer Area =================-->
-       
+        <footer class="footer_area section_gap">
+            <div class="container">
+
+ 		<div class="col-lg-6 col-sm-6" style="margin-bottom : 100px">
+                        <aside class="f_widget ab_widget">
+                            <div class="f_title">
+                                <h3>Lokasi</h3>
+                            </div>
+                            <div id="mapid"></div>
+                        </aside>
+                    </div>
+
+                      <div class="row">
+                    <div class="col-lg-6">
+                        <div class="contact_info">
+                            <h3>Kontak Info Pelayanan Terpadu Satu Pintu</h3><br>
+                            <div class="info_item">
+                                <i class="lnr lnr-home"></i>
+                                <h6>Jl. PB Sudirman, Pagah, Jemberlor, Kec. Patrang</h6>
+                                <p>Kabupaten Jember, Jawa Timur 68118</p>
+                            </div>
+                            <div class="info_item">
+                                <i class="lnr lnr-phone-handset"></i>
+                                <h6><a href="#">(0331) 4431707</a></h6>
+                                <p>Senin - Jumat Pukul 07.00-15.00 WIB </p>
+                            </div>
+                            <div class="info_item">
+                                <i class="lnr lnr-envelope"></i>
+                                <h6><a href="#">ptsp@gmail.com</a></h6>
+                                <p>Kirim email jika ada yang ingin ditanyakan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </footer>
         <!--================End Footer Area =================-->
         
 
@@ -563,6 +612,9 @@
         opacity:1
     }
 }
+
+
+
 body.swal2-toast-shown.swal2-has-input>.swal2-container>.swal2-toast{
     flex-direction:column;
     align-items:stretch
@@ -1641,5 +1693,18 @@ body.swal2-no-backdrop .swal2-shown.swal2-bottom-end,body.swal2-no-backdrop .swa
 }
 
         </style>
+
+        <script>
+		var mymap = L.map('mapid').setView([-8.1646811, 113.7148845], 12);
+
+         L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=yonG280E2JEzE5rYw1o2', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(mymap);
+
+         var marker = L.marker([-8.1646811, 113.7148845]).addTo(mymap);
+
+         marker.bindPopup("<b>Lokasi Anda!</b><br> Saat ini.").openPopup();
+        	
+        </script>
     </body>
 </html>

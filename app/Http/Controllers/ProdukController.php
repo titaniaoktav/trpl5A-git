@@ -14,7 +14,7 @@ class ProdukController extends Controller
     }
     public function indexxes()
     {
-    	return redirect('/produk-unggulan');
+    	return redirect('/beranda');
     }
     public function detail($id)
     {

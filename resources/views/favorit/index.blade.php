@@ -89,7 +89,7 @@ Produk Usaha
           <div class="main_title">
             
             <h2>Produk Usaha</h2>
-            <p>Produk Usaha merupakan produk - produk hasil usaha yang ada di Jember. Produk ini telah mendapatkan izin usaha dari Dinas Perdagangan Jember. </p>
+            <p>Produk Usaha merupakan produk - produk hasil usaha yang ada di Jember. Produk ini telah mendapatkan izin usaha dari Pusat Pelayanan Terpadu Satu Pintu dan telah mendapatkan izin untuk ditampilkan pada produk usaha di Kabupaten Jember oleh Dinas Perindustrian dan Perdagangan Kabupaten Jember. </p>
           </div>
         </div>
       </div>

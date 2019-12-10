@@ -39,6 +39,8 @@ class WirausahaController extends Controller
 
         else if (!is_numeric($req->bpjs_kesehatan)) {
             return redirect()->back()->with('gagal','Nomor BPJS kesehatan harus berupa angka');
+        }else if(!preg_match("/^[a-zA-Z ]*$/", $req->nama_lengkap)){
+            return redirect()->back()->with('gagal','input nama lengkap harus berupa huruf');
         }
 
         // FOTO VALIDASI

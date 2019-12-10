@@ -14,7 +14,7 @@ class UsahaController extends Controller
 
     	$usaha = \App\Usaha::where('wirausaha_id','=',$wira->id)
             ->orderBy('updated_at','DESC')
-            ->get();
+            ->paginate(6);
     	return view('usaha.buat', compact('usaha','wira'));
     }
     public function create(Request $req)

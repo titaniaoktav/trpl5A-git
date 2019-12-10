@@ -1,4 +1,9 @@
-@extends('include.index-reg')
+@extends('include.indexx')
+
+@section('page')
+Pendaftaran Wirausaha
+@stop
+
 
 
 @section('content')
@@ -101,13 +106,13 @@
         <div class="form-group row">
             <label for="email" class="col-sm-3 col-form-label text-md-left">No. HP </label>
             <div class="col-md-7">
-                <input id="email" type="text" class="form-control" name="nohp" required maxlength="13">
+                <input id="text" type="text" class="form-control" name="nohp" required maxlength="13">
             </div>
         </div>
         <div class="form-group row">
             <label for="email" class="col-sm-3 col-form-label text-md-left">No. KTP </label>
             <div class="col-md-7">
-                <input id="email" type="text" class="form-control" name="noktp" required maxlength="16">
+                <input id="text" type="text" class="form-control" name="noktp" required maxlength="16">
             </div>
         </div>
         <div class="form-group row">
@@ -136,13 +141,13 @@
         <div class="form-group row">
             <label for="email" class="col-sm-5 col-form-label text-md-left">No. NPWP </label>
             <div class="col-md-7">
-                <input id="email" type="text" class="form-control" name="nonpwp" required maxlength="15">
+                <input id="text" type="text" class="form-control" name="nonpwp" required maxlength="15">
             </div>
         </div>
         <div class="form-group row">
             <label for="email" class="col-sm-5 col-form-label text-md-left">BPJS ketenagakerjaan </label>
             <div class="col-md-7">
-                <input id="email" type="text" class="form-control" name="bpjs_ketenagakerjaan" required maxlength="11">
+                <input type="text" class="form-control" name="bpjs_ketenagakerjaan" required maxlength="11">
             </div>
         </div>
         <div class="form-group row">
@@ -168,7 +173,7 @@
         <div class="form-group row">
             <label for="email" class="col-sm-5 col-form-label text-md-left">Foto BPJS KetenagaKerjaan </label>
             <div class="col-md-7">
-                <input id="email" type="file" class="form-control" name="foto_bpjs_ketenagakerjaan" required>
+                <input type="file" class="form-control" name="foto_bpjs_ketenagakerjaan" required>
             </div>
         </div>
         <div class="form-group row">

@@ -11,10 +11,10 @@
 |
 */
 
-
-Route::get('/beranda',function(){
-	return view('beranda');
+Route::get('/beranda', function () {
+    return view('test-z');
 });
+
 //===||login SEMUA||===// 
 
 Route::group(['middleware' => ['auth','checkRole:wirausahawan,humas,admin']], function(){
@@ -46,6 +46,8 @@ Route::post('/delete-akun-humas','HumasController@delete');
 //===||login WIRAUSAHAWAN||===// 
 
 Route::group(['middleware' => ['auth','checkRole:wirausahawan']], function(){
+
+Route::get('/beranda-wirausaha','BerandaController@wira');
 
 Route::get('/usaha','UsahaController@index');
 

@@ -206,7 +206,7 @@ Profil Saya
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Foto KTP</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Batal">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -214,7 +214,7 @@ Profil Saya
         <img class="img-fluid" src="bukti/{{$wira->foto_ktp}}"  style="object-fit: cover;height: 100%;width: 100%;">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Batal</button>
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
     </div>
@@ -249,8 +249,8 @@ Profil Saya
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary btn-sm">Ubah Foto</button>
+        <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary btn-sm">Ubah</button>
         </form>
       </div>
     </div>
@@ -370,8 +370,8 @@ Profil Saya
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary btn-sm">Ubah Foto</button>
+        <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary btn-sm">Ubah</button>
         </form>
       </div>
     </div>
@@ -389,7 +389,7 @@ Profil Saya
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Foto BPJS Kesehatan</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Batal">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -397,7 +397,7 @@ Profil Saya
         <img class="img-fluid" src="bukti/{{$wira->foto_bpjs_kesehatan}}"  style="object-fit: cover;height: 100%;width: 100%;">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Batal</button>
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
     </div>
@@ -410,7 +410,7 @@ Profil Saya
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Ubah Foto BPJS Kesehatan</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Batal">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -432,8 +432,8 @@ Profil Saya
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary btn-sm">Ubah Foto</button>
+        <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary btn-sm">Ubah</button>
         </form>
       </div>
     </div>
@@ -451,7 +451,7 @@ Profil Saya
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Foto Formal</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Batal">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -459,7 +459,7 @@ Profil Saya
         <img class="img-fluid" src="bukti/{{$wira->foto_formal}}" style="object-fit: cover;height: 100%;width: 100%;">
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Batal</button>
         <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
       </div>
     </div>
@@ -472,7 +472,7 @@ Profil Saya
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Ubah Foto Formal</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Batal">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -518,8 +518,8 @@ Profil Saya
          -->
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Close</button>
-          <button type="submit" class="btn btn-primary btn-sm">Ubah Foto</button>
+        <button type="button" class="btn btn-dark btn-sm" data-dismiss="modal">Batal</button>
+          <button type="submit" class="btn btn-primary btn-sm">Ubah</button>
         </form>
       </div>
     </div>

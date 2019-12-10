@@ -117,7 +117,7 @@ Usaha
         <div class="row">
             <div class="col-md-6">
             <div class="form-group row">
-            <label for="email" class="col-sm-3 col-form-label text-md-right">Usaha </label>
+            <label for="email" class="col-sm-3 col-form-label text-md-right">Nama Usaha </label>
             <div class="col-md-9">
                 <input type="text" class="form-control" name="nama_usaha" required maxlength="16">
             </div>
@@ -161,7 +161,7 @@ Usaha
             </div>
         </div>
         <div class="form-group row">
-            <label for="email" class="col-sm-3 col-form-label text-md-right">Produk</label>
+            <label for="email" class="col-sm-3 col-form-label text-md-right">Nama Produk</label>
             <div class="col-md-9">
                 <input type="text" class="form-control" name="barang" required maxlength="100">
             </div>
@@ -206,7 +206,7 @@ Usaha
           <div class="main_title">
             
             <h2>Produk Usaha</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <p>Wirausahawan dapat mengajukan usaha yang dimiliki untuk mendapatkan surat izin usaha oleh Pemerintah Kabupaten Jember dengan disetujui oleh Pelayanan Terpadu Satu Pintu bekerjasama dengan Dinas Perdagangan Kabupaten Jember </p>
           </div>
         </div>
       </div>
@@ -319,7 +319,6 @@ Usaha
             <label for="email" class="col-sm-3 col-form-label text-md-right">Status Usaha</label>
             <div class="col-md-9">
                 <select class="form-control" name="jenis_usaha">
-                  <option disabled>Pilih jenis usaha</option>
                   <option value="sewa" {{$u->status_usaha=="sewa" ? "selected" : ""}}>Sewa</option>
                   <option value="tidak sewa" {{$u->status_usaha=="tidak sewa" ? "selected" : ""}}>Tidak Sewa</option>
                 </select>
@@ -350,6 +349,25 @@ Usaha
 </div>
 </div>
 
+                          <nav class="blog-pagination justify-content-center d-flex">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Previous">
+                                        <span aria-hidden="true">
+                                            <span class="lnr lnr-chevron-left"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                                {{$usaha->links()}}
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Next">
+                                        <span aria-hidden="true">
+                                            <span class="lnr lnr-chevron-right"></span>
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
 </div>
 
 </div>

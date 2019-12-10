@@ -92,8 +92,8 @@ Akun Humas
         <div class="col-lg-8 text-center">
           <div class="main_title">
             
-            <h2>Akun Humas</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            <h2>Akun Humas PTSP</h2>
+            <p>Akun Humas PTSP yang masih aktif bekerja pada Pusat Pelayanan Terpadu Satu Pintu Kabupaten Jember</p>
           </div>
         </div>
       </div>  
@@ -167,7 +167,7 @@ Akun Humas
 	<th>Nama</th>
 	<th>NIP</th>
 	<th>Email</th>
-	<th>#</th>
+	<th>Pilih Aksi</th>
 	</thead>
 	<tbody>
 	@foreach($humas as $index => $h) 
@@ -180,7 +180,7 @@ Akun Humas
 		<td>
       <div class="row">
         <div class="col-md-3 offset-2">
-			<button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#mm{{$h->id}}">
+			<button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#mm{{$h->id}}">
         <i class="fa fa-pencil"></i>
 			  Ubah
 			</button>
@@ -188,7 +188,7 @@ Akun Humas
       <div class="col-md-3 ml-2">
       <form method="POST" action="/delete-akun-humas" >
       {{ csrf_field() }}
-        <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#dd{{$h->id}}">
+        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#dd{{$h->id}}">
           <i class="fa fa-trash"></i>
           Hapus
         </button>
@@ -216,17 +216,17 @@ Akun Humas
       {{ csrf_field() }}
         <input type="hidden" value="{{$h->id}}" name="idhumasTo">
         <input type="hidden" value="{{$h->user_id}}" name="iduserTo">
-         <p class="mt-3" style="font-size: 20px">Apakah Anda Yakin Untuk Menghapus Akun Humas ?</p>
+         <p class="mt-3" style="font-size: 15px">Apakah anda yakin akan menghapus akun Humas PTSP?</p>
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">
+       <!--  <button type="button" class="btn btn-link btn-sm" data-dismiss="modal">
           <i class="fa fa-close"></i>
           Tutup
-        </button>
+        </button> -->
         <button type="submit" class="btn btn-dark btn-sm">
           <i class="fa fa-check"></i>
-            Hapus Data
+            Hapus 
         </button>
       </div>
     </div>
